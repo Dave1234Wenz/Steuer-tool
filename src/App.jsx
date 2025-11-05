@@ -151,9 +151,7 @@ function HoldingRechner() {
               <div className="text-3xl font-bold">{fmt(results.netToHolding)}</div>
             </div>
           </div>
-          <p className="text-xs text-slate-500 mt-3">
-            Hinweis: Vereinfachtes Modell. Keine Steuerberatung.
-          </p>
+          <p className="text-xs text-slate-500 mt-3">Hinweis: Vereinfachtes Modell. Keine Steuerberatung.</p>
         </div>
       </div>
     </Section>
@@ -236,47 +234,5 @@ function GfOptimierung() {
         </div>
         <div className="md:col-span-2 grid sm:grid-cols-2 gap-4">
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <div className="text-sm text-slate-500">Netto aus Gehalt</div>
-            <div className="text-3xl font-bold">{fmt(salaryNet.netto)}</div>
-          </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <div className="text-sm text-slate-500">Netto aus Ausschüttung</div>
-            <div className="text-xs text-slate-500">{distributionNet.mode}</div>
-            <div className="text-3xl font-bold mt-1">{fmt(distributionNet.netto)}</div>
-          </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200 sm:col-span-2">
-            <div className="text-sm text-slate-600">Vergleich</div>
-            <div className="mt-1 text-2xl font-semibold">
-              {distributionNet.netto > salaryNet.netto ? (
-                <span>🔹 Ausschüttung bringt aktuell {fmt(distributionNet.netto - salaryNet.netto)} mehr Netto</span>
-              ) : (
-                <span>🔹 Gehalt bringt aktuell {fmt(salaryNet.netto - distributionNet.netto)} mehr Netto</span>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    </Section>
-  );
-}
-
-export default function App() {
-  return (
-    <div className="min-h-screen bg-slate-100 text-slate-900">
-      <header className="p-6">
-        <h1 className="text-2xl font-bold">Digitale Steuer-Tools</h1>
-        <p className="text-slate-600">Holding-Rechner & Geschäftsführer-Optimierung</p>
-      </header>
-      <main className="max-w-6xl mx-auto p-6 grid gap-6">
-        <HoldingRechner />
-        <GfOptimierung />
-        <Section title="Disclaimer" subtitle="Bitte sichtbar auf der Seite lassen">
-          <p className="text-sm text-slate-600">
-            Dieses Tool ersetzt keine individuelle Steuerberatung. Ergebnisse sind Näherungen auf Basis typischer Durchschnittswerte.
-          </p>
-        </Section>
-      </main>
-      <footer className="p-6 text-xs text-slate-500">© {new Date().getFullYear()} – David Wenzel Steuerkanzlei</footer>
-    </div>
-  );
-              }
+            <div className="text-sm text-slate-500
+            
